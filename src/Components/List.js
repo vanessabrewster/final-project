@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-let projects = [
-  { name: 'Project One', date: 'blah blah blah', startTime: '12347593', endTime: '34623823', totalTime: '1234567' },
-  { name: 'Project Two', date: 'blah blah blah', startTime: '12347593', endTime: '34623823', totalTime: '1234567' },
-  { name: 'Project Three', date: 'blah blah blah', startTime: '12347593', endTime: '34623823', totalTime: '1234567' },
-  { name: 'Project Four', date: 'blah blah blah', startTime: '12347593', endTime: '34623823', totalTime: '1234567' },
-]
+import moment from 'moment';
+import _ from "lodash";
 
 export default class List extends Component {
+
   render() {
     return (
-      <div>
+      <div className="list">
         <ul>
-          {projects.map((project, i) => {
+          {_.map(this.props.projects,(project, i) => {
             return <ListRow key={i} project={project} />
           })}
         </ul>
@@ -21,29 +18,23 @@ export default class List extends Component {
 }
 
 export class ListRow extends Component {
-  constructor(props) {
-    super(props)
-  }
+
   render() {
+    let duration = moment.duration(this.props.project.difference)
+    let display = `${duration.hours()}:${duration.minutes()}:${duration.seconds()}`
     return (
-      <div>
-        <div>
-          <button>Start</button>
+      <div className="listrow">
+        <div className="listrowdate">
+          <p>{this.props.project.date}</p>
         </div>
-        <div>
-          {this.props.project.date}
+        <div className="listrowduration">
+          <p>{moment(this.props.project.startTime).format('hh:mm:ss')} – {moment(this.props.project.endTime).format('hh:mm:ss')}</p>
         </div>
-        <div>
-          {this.props.project.name}
+        <div className="listrowname">
+          <h2>{this.props.project.projectName}</h2>
         </div>
-        <div>
-          {this.props.project.totalTime}
-        </div>
-        <div>
-          {this.props.project.startTime}
-        </div>
-        <div>
-          {this.props.project.endTime}
+        <div className="listrowtotaltime">
+          <h3>{display}</h3>
         </div>
       </div>
     )

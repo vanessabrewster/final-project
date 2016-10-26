@@ -1,24 +1,343 @@
-.App {
-  text-align: center;
+body {
+  color:white;
+  background: white;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.wrapper {
+  margin-bottom:20px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.hidden {
+  display: none;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.header {
+  height:30px;
+  padding:20px;
+  margin-bottom:20px;
+  background: rgba(111,222,190,1);
+}
+
+.username {
+  margin-top: 6px;
+  float:left;
+}
+
+.usernamefont {
+  color: white;
+  font-weight:400;
+}
+
+.login {
+  float: right;
+  color: #54d1ff;
+  margin-top: 5px;
+}
+
+.loginbutton{
+  background-color: white;
+  border: none;
+  color: rgba(111,222,190,1);
+  padding: 2px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align:center;
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.loginbutton:hover {
+  color:white;
+  background-color:rgba(166,232,245,1);
+}
+.signupbutton{
+  background-color: white;
+  border: none;
+  color: rgba(111,222,190,1);
+  padding: 2px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.signupbutton:hover {
+  color:white;
+  background-color:rgba(166,232,245,1);
+}
+
+.timer {
+  text-align:center;
+  float:left;
+  width:30%;
+  height:560px;
+}
+
+.timerwrap {
+  margin: 20px;
+  border-radius:8px;
+  height: 500px;
+  padding-top:30px;
+
+  background: rgba(111,222,190,1);
+  background: -moz-linear-gradient(-45deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(111,222,190,1)), color-stop(100%, rgba(166,232,245,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  background: linear-gradient(135deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6fdebe', endColorstr='#a6e8f5', GradientType=1 );
+
+}
+
+.timerprojectname{
+  padding:10px;
+}
+
+.enterprojectname{
+  margin-bottom:10px;
+}
+
+.projectnameinput{
+  width:100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  display: inline-block;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom-color: white;
+  border-bottom-width: medium;
+  box-sizing: border-box;
+  background:none;
+  outline:none;
+  margin-bottom:30px;
+  font-size: 20px;
+  color:white;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.projectnameinputbutton{
+  background-color: white;
+  border: none;
+  color: rgba(111,222,190,1);
+  padding: 8px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.projectnameinputbutton:hover {
+  color:white;
+  background-color:rgba(166,232,245,1);
+}
+
+.ticker {
+  margin-top:110px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom:100px;
+}
+
+.timerplaybutton {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 90px;
+  text-decoration: none;
+}
+
+.timerplaybutton: a {
+  text-decoration: none;
+}
+
+.timerplaybutton: hover {
+  color: red;
+  text-decoration: none;
+}
+
+.timerplaybutton: active {
+  text-decoration: none;
+}
+
+.timerplaybutton: visited {
+  text-decoration: none;
+}
+
+.list {
+  padding-top:21px;
+  float:right;
+  width:70%;
+}
+
+.listrow {
+  height:40px;
+  margin-bottom:10px;
+  border-radius: 4px;
+  margin-right: 20px;
+
+  background: rgba(111,222,190,1);
+  background: -moz-linear-gradient(-45deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(111,222,190,1)), color-stop(100%, rgba(166,232,245,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  background: linear-gradient(135deg, rgba(111,222,190,1) 0%, rgba(166,232,245,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6fdebe', endColorstr='#a6e8f5', GradientType=1 );
+}
+
+.listrowdate {
+  margin-top:13px;
+  float:left;
+  margin-left:20px;
+}
+
+.listrowduration {
+  margin-top: 13px;
+  float:left;
+  margin-left:10px;
+}
+
+ .listrowname {
+   margin-top:13px;
+   float:left;
+   margin-left:30px;
+ }
+
+.listrowtotaltime {
+   margin-right: 30px;
+   margin-top: 13px;
+   float:right;
+ }
+
+ .footer {
+   margin-top:610px;
+   width: 100% ;
+   background: rgba(166,232,245,1);
+   height: 20px;
+   padding:25px;
+ }
+
+ @media (max-width: 1200px) {
+
+   .list {
+     margin-top: 20px;
+     width: 100%;
+     padding-top:0px;
+     padding-left:10px;
+     padding-right:10px;
+     float: none;
+   }
+
+   .listrow {
+     margin-right: 30px;
+     margin-left: 10px;
+   }
+
+   .listrowduration {
+     display:none;
+   }
+
+   .timer {
+     margin-top:40px;
+     margin-left: auto;
+     margin-right: auto;
+     width:100%;
+     float: none;
+   }
+
+   .timerprojectname{
+     padding-left:50px;
+     padding-right:50px;
+   }
+
+   .footer {
+     position: relative;
+      margin-top:40px;
+   }
+ }
+
+  @media (max-width: 700px) {
+    h2 {
+      font-size:15px;
+    }
+
+    .header{
+      height:60px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .username{
+      margin-left: auto;
+      margin-right: auto;
+      float:none;
+      text-align:center;
+    }
+
+    .login{
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      float:none;
+      text-align:center;
+    }
+  }
